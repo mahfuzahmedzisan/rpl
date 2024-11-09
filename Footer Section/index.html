@@ -1,0 +1,130 @@
+<style>
+   a {
+      text-decoration: none;
+   }
+
+   footer .social i {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+   }
+
+   footer .showDateTime {
+      font-size: 16px;
+      font-weight: 600;
+   }
+
+   footer .social i:hover {
+      background-color: #fff;
+      color: #000;
+   }
+
+   footer .logo .image {
+      width: 20vmin;
+      object-fit: cover;
+      text-align: center;
+   }
+
+   footer .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   footer .contact a {
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+   }
+
+   footer .contact a:hover {
+      color: #474646;
+   }
+
+   footer .contact a i {
+      margin-right: 10px;
+   }
+
+   footer .socket {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+   }
+
+   footer .socket a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+   }
+</style>
+
+
+
+<footer>
+   <div class="top-footer m-5">
+      <div class="container">
+         <div class="row gy-5">
+            <div class="col-md-4">
+               <div class="social d-flex flex-column justify-content-center align-items-center h-100">
+                  <h4 class="mb-3 fs-2 fw-bold">Follow Us</h4>
+                  <div class="d-flex align-items-center">
+                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  </div>
+                  <div class="showDateTime mt-3"></div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="logo d-flex justify-content-center align-items-center h-100">
+                  <div class="image">
+                     <img src="logo.png" alt="logo">
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="contact d-flex flex-column justify-content-center align-items-center h-100">
+                  <h4 class="mb-3 fs-2 fw-bold">Contact Us</h4>
+                  <a href="tell:+880123456789" class="d-flex align-items-center">
+                     <i class="fa-solid fa-phone"></i>
+                     <span class="ms-2">+880 123 456 789</span>
+                  </a>
+                  <a href="mailto:example@example.com" class="d-flex align-items-center">
+                     <i class="fa-solid fa-envelope"></i>
+                     <span class="ms-2">example@example.com</span>
+                  </a>
+                  <a href="#" class="d-flex align-items-center">
+                     <i class="fa-solid fa-location-dot"></i>
+                     <span class="ms-2">Mirpur 10, Dhaka</span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="socket">
+      <p>Copyright &copy; 2024 All Right Reserved | Develop by <a href="#">Mahfuz Ahmed</a></p>
+   </div>
+</footer>
+
+<script>
+   const upddateDateTime = () => {
+      const now = new Date();
+      document.querySelector('.showDateTime').innerHTML = now.toLocaleString();
+   }
+
+   setInterval(upddateDateTime, 1000);
+</script>
